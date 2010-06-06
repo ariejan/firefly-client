@@ -5,13 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "firefly-client"
-    gem.summary = %Q{A client for the FireFly URL shortener server}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A client for the Firefly URL shortener server}
+    gem.description = %Q{This is a client Gem for the Firefly URL shortener. It allows you Ruby application to call Firefly directly to shorten URLs.}
     gem.email = "ariejan@ariejan.net"
     gem.homepage = "http://github.com/ariejan/firefly-client"
     gem.authors = ["Ariejan de Vroom"]
+		gem.add_dependency "httparty", ">= 0.5.2"
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+		gem.add_development_dependency "fakeweb", ">= 1.2.8"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
